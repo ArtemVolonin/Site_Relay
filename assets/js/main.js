@@ -1,38 +1,47 @@
-//  //Карта при помощи Leaflet API с конкретным местом положения
-// let center = [50.466048, 30.515125];
 
-// // Создаём карту
-// let map2 = L.map('map2').setView(center, 20);
+let login = document.querySelector(".login");
+let sign_up = document.querySelector(".sign_up");
+let close_login = document.querySelector(".close_login");
 
-// // Настраиваем OSM
-// L.tileLayer(
-//     'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//         maxZoom: 18
-//     }).addTo(map2);
+sign_up.addEventListener("click", function (e){
+    document.querySelector('.registration-window').classList.add('show');
+})
 
-// // добавляем маркер в указанном месте
-// L.marker(center).addTo(map2);
+login.addEventListener("click", function (e){
+    document.querySelector('.registration-window').classList.add('show');
+})
 
-//  //Карта при помощи Leaflet API с текущим местом положения
-function success(position) {
-    let map2, marker,
-        latitude = position.coords.latitude,
-        longitude = position.coords.longitude;
+close_login.addEventListener('click', () => {
+    document.querySelector('.registration-window').classList.remove('show');
+});
 
-    // Получаем карту с использованием leaflet
-    map2 = L.map('map2').setView([latitude, longitude], 13);
+function validateForm() {
+    var name = document.forms[0]["name"].value;
+    var email = document.forms[0]["email"].value;
+    var password = document.forms[0]["password"].value;
 
-    L.tileLayer(
-        'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 18
-        }).addTo(map2);
+    if (name == "") {
+        alert("Введите имя");
+        return false;
+    }
 
+    if (email == "") {
+        alert("Введите адрес электронной почты");
+        return false;
+    } else if (!validateEmail(email)) {
+        alert("Введите корректный адрес электронной почты");
+        return false;
+    }
 
-    // Маркер с использованием leaflet
-    marker = L.marker([latitude, longitude]).addTo(map2);
+    if (password == "") {
+        alert("Введите пароль");
+        return false;
+    }
+
+    return true;
 }
 
-function error() {
-    alert('Получить текущую позицию не удалось. Пожалуйста, разрешите доступ к геолокации.');
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
 }
-navigator.geolocation.getCurrentPosition(success, error);

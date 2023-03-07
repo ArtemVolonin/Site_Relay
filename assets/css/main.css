@@ -1,7 +1,7 @@
 @font-face{
     font-family: 'Roboto';
     src: url(../font/Roboto.ttf);
-    font: weight 400;
+    font-weight: 400;
 }
 body{
     font-family: 'Roboto';
@@ -10,6 +10,7 @@ body{
 .wrapper{
     width: 1200px;
     margin: auto;
+    margin-top: 80px;
 
 }
 header{
@@ -19,6 +20,12 @@ header{
     margin: auto;
     background-color: #F1ECDA;
     justify-content: space-around;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 8888;
 
 }
 .logo{
@@ -39,7 +46,66 @@ nav{
     /*justify-content: space-around;*/
     width: 800px;
     margin-left: 10%;
+
 }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin:auto 10px;
+
+
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+nav li:hover{
+    background-color: #D5E27B;
+    border-radius: 20px;
+}
+
+nav a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    color: #25201F;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+nav ul li:hover > ul {
+    display:inherit;
+    background-color: #D5E27B;
+    border-radius: 20px;
+}
+
+nav ul ul li {
+    width: 200px;
+    float:none;
+    display:list-item;
+    position: relative;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top:-60px;
+    left:200px;
+}
+
+
 span{
     margin-right: 5px;
 }
@@ -65,8 +131,6 @@ a{
     /*height: 40px;*/
     padding: 10px;
     border-radius: 20px;
-    left: 152px;
-    top: 20px;
     margin:auto 10px;
 
     font-family: 'Roboto';
@@ -74,9 +138,6 @@ a{
     font-weight: 400;
     font-size: 15px;
     line-height: 21px;
-
-    /* identical to box height, or 139% */
-
     color: #25201F;
 }
 /*-----------END HEADER----------------------*/
@@ -510,4 +571,98 @@ footer h7{
     font-size: 14px;
     line-height: 25px;
     color: #F1ECDA;
+}
+.registration-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+    background: rgb(241 236 218 / 85%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /*max-width: 400px;*/
+    margin: 0 auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    /*color: #F1ECDA;*/
+    padding: 10px;
+}
+.login_header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #80808059;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.close_login{
+    cursor: pointer;
+}
+.show {
+    display: block !important;
+}
+
+.img_registration img{
+   width: 300px;
+    text-align: center;
+}
+form h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    /*color: #4CAF50;*/
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    /*border: none;*/
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    /*border: none;*/
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+.social_btn{
+    width: 153px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.social_btn img{
+    margin-right: 10px;
+}
+.div_soc_btn{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }

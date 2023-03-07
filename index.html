@@ -12,16 +12,42 @@
 <div class="wrapper">
 <header>
     <img src="assets/img/Logo.png" class="logo">
-    <nav>
-      <div class="header_menu"><a href="#"> What is Relay <img src="assets/img/v.png"></a></div>
-        <div class="header_menu"><a href="#"> Accountants & Bookkeepers <img src="assets/img/v.png"></a></div>
-        <div class="header_menu"><a href="#"> Pricing </a></div>
-        <div class="header_menu"><a href="#"> Resources <img src="assets/img/v.png"></a></div>
-        <div class="header_menu"><a href="#"> Customer Stories </a></div>
+      <nav>
+        <ul>
+      <li ><a href="#"> What is Relay <img src="assets/img/v.png"></a>
+        <ul>
+            <li ><a href="#">Business checking</a></li>
+            <li  ><a href="#">Accounts payable</a></li>
+            <li><a href="#">Pricing</a></li>
+        </ul>
+       </li>
+        <li><a href="#"> Accountants & Bookkeepers <img src="assets/img/v.png"></a>
+            <ul>
+                <li><a href="#">Client banking</a></li>
+                <li ><a href="#">Gearing Up</a></li>
+                <li ><a href="#">Get certified</a></li>
+                <li ><a href="#">Guides</a></li>
+                <li ><a href="#">Accounts payable</a></li>
+            </ul>
+        </li>
+        <li ><a href="#"> Pricing </a></li>
+        <li ><a href="#"> Resources <img src="assets/img/v.png"></a>
+            <ul>
+                <li><a href="#">Everyday business blog</a></li>
+                <li ><a href="#">Advisor hub</a></li>
+                <li ><a href="#">FAQs</a></li>
+                <li ><a href="#">Bi-weekly webinar</a></li>
+                <li ><a href="#">Support center</a></li>
+                <li ><a href="#">Banking for real estate investors</a></li>
+                <li ><a href="#">Banking for e-commerce</a></li>
+            </ul>
+        </li>
+        <li ><a href="#"> Customer Stories </a></li>
+        </ul>
     </nav>
   <div class="header_rigth">
-      <div class="header_menu"><a href="#"> Login </a></div>
-      <div class="header_menu green_div"><a href="#"> Sign up </a></div>
+      <div class="header_menu login"><a href="#"> Login </a></div>
+      <div class="header_menu green_div sign_up"><a href="#"> Sign up </a></div>
   </div>
 </header>
 
@@ -238,6 +264,79 @@
         <h5>Payment services are provided by The Currency Cloud Limited. Registered in England No. 06323311. Registered Office: The Steward Building 1st Floor, 12 Steward Street London E1 6FQ. The Currency Cloud Limited is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 for the issuing of electronic money (FRN: 900199). In the US Currency Cloud operates in partnership with CFSB. CFSB fully owns the bank program and services are provided by The Currency Cloud Inc.</h5>
     </footer>
 </div>
+<!--LOGIN-->
+<div class="registration-window">
+    <div class="login_header">
+        <h2>Regiration</h2>
+        <span class="close_login">✖</span>
+    </div>
+    <div class="img_registration">
+        <img src="assets/img/img_registration.png">
+    </div>
+
+    <form>
+        <!-- Форма для ввода данных пользователя -->
+
+        <div class="div_soc_btn">
+        <button class="social_btn" data-provider="Google"> <img src="assets/img/google.png" alt="google"> Google </button>
+        <button class="social_btn" data-provider="Facebook">  <img src="assets/img/facebook.png" alt="facebook"> Facebook </button>
+        </div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required minlength="3">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+
+        <input type="submit" value="Submit">
+    </form>
+  </div>
+
+
+
+                        <!--&lt;!&ndash;LOGIN&ndash;&gt;-->
+<!--<form id="login-form" method="post" action="" data-validation-rule="loginForm" novalidate="novalidate">-->
+<!--<div class="account-modal__form-block login-forms" id="login-forms">-->
+<!--    <div class="account-modal__title-block">-->
+<!--        <h3 class="account-modal__title">Вход через</h3>-->
+<!--        <span class="account-modal__close account-modal__close_login">✖</span>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <div class="account-modal__social-block">-->
+<!--            <button class="account-modal__social-item external-login-btn" data-provider="Google">-->
+<!--                <img src="assets/img/google.png" alt="google"> Google </button>-->
+<!--            <button class="account-modal__social-item external-login-btn" data-provider="Facebook">-->
+<!--                <img src="assets/img/facebook.png" alt="facebook"> Facebook </button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="account-modal__sub-title">или E-mail</div>-->
+
+<!--        <div class="account-modal__form-item login-form-element">-->
+<!--            <input class="account-modal__form-input" name="Email" type="email" placeholder="E-mail*" spellcheck="false" autofocus="">-->
+<!--        </div>-->
+<!--        <div class="account-modal__form-item login-form-element"><div class="show-and-hide-password hide-pswrd" data-id="enter-pswrd">-->
+
+<!--        </div>-->
+<!--            <input class="account-modal__form-input enter-pswrd" name="Password" type="password" placeholder="Пароль" autocomplete="off">-->
+<!--        </div>-->
+<!--        <div class="account-modal__form-recaptcha g-recaptcha" data-sitekey="6LfaPu0SAAAAAF04y3HcQBEEAVQsq40inJYNK8al">-->
+<!--            <div style="width: 304px; height: 78px;"><div>-->
+<!--                <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfaPu0SAAAAAF04y3HcQBEEAVQsq40inJYNK8al&amp;co=aHR0cHM6Ly9pdHZkbi5jb206NDQz&amp;hl=ru&amp;v=8G7OPK94bhCRbT0VqyEVpQNj&amp;size=normal&amp;cb=xnbrp9c1jht1" role="presentation" name="a-7wvapglz2ry8" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="304" height="78" frameborder="0"></iframe>-->
+<!--            </div>-->
+<!--                <textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--     <div class="account-modal__form-remember login-form-element">-->
+<!--        <div class="account-modal__form-remember-block"><input type="checkbox" name="RememberMe" id="RememberMe" value="true">-->
+<!--        <label for="RememberMe" class="remember-me">Запомнить меня</label></div>-->
+<!--        <input class="btn-filled-orange" type="submit" value="Войти"></div>-->
+<!--        <div class="account-modal__form-errors validation-errors" style="display:none"><ul></ul>-->
+<!--    </div>-->
+
+
+<!--</form>-->
 <script src="assets/js/main.js"></script>
 
 </body>
