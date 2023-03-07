@@ -15,6 +15,18 @@ close_login.addEventListener('click', () => {
     document.querySelector('.registration-window').classList.remove('show');
 });
 
+const video = document.querySelector('video');
+
+video.addEventListener('mouseover', () => {
+    video.play();
+});
+
+video.addEventListener('mouseout', () => {
+    video.pause();
+});
+
+//---------------------------------
+
 function validateForm() {
     var name = document.forms[0]["name"].value;
     var email = document.forms[0]["email"].value;
